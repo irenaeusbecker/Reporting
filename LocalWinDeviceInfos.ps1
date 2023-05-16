@@ -71,7 +71,7 @@ $Get_Current_Model = $ComputerInfo.CsModel
 $OSDisplayVersion = $ComputerInfo.OSDisplayVersion
 $OSLanguage = $ComputerInfo.OsLanguage
 $DNSHostName = $ComputerInfo.CsDNSHostName
-$BIOS_Version = (gwmi win32_bios).SMBIOSBIOSVersion
+$BIOS_Version = $ComputerInfo.BiosBIOSVersion
 
 # Get Hard disk size info
 $Win32_LogicalDisk = Get-ciminstance Win32_LogicalDisk | where {$_.DeviceID -eq "C:"}
